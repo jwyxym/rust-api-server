@@ -1,0 +1,41 @@
+{
+	"port" : "8080",
+	"upload" : "upload",
+	"pics" : [
+		{
+			"key" : "",
+			"path" : ""
+		}
+	],
+	"text" : [
+		{
+			"key" : "",
+			"path" : ""
+		}
+	],
+	"file" : [
+		{
+			"key" : "",
+			"path" : "",
+			"name" : ""
+		}
+	],
+	"string" : [
+		{
+			"key" : "",
+			"text" : ""
+		}
+	],
+	"web" : [
+		{
+			"key" : "",
+			"path" : ""
+		}
+	],
+	"user" : [
+		{
+			"name" : "",
+			"password" : ""
+		}
+	]
+}
