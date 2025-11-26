@@ -7,7 +7,8 @@ pub struct Config {
 	string: Vec<StringItem>,
 	web: Vec<WebItem>,
 	user: Vec<User>,
-	upload: String
+	upload: String,
+	port: String
 }
 
 impl Config {
@@ -37,6 +38,10 @@ impl Config {
 
 	pub fn upload(&self) -> String {
 		self.upload.clone()
+	}
+
+	pub fn port(&self) -> String {
+		self.port.clone()
 	}
 }
 

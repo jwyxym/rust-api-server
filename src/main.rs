@@ -107,6 +107,7 @@ async fn main() -> Result<(), std_Error> {
 	match read_to_string("config.json") {
 		Ok(content) => {
 			let config: structs::Config = serde_json::from_str(&content)?;
+			let port: String = config.port();
 			HttpServer::new(move || {
 				App::new()
 					.app_data(web::Data::new(config.clone()))
@@ -118,7 +119,7 @@ async fn main() -> Result<(), std_Error> {
 					.service(http)
 					.service(upload)
 			})
-			.bind("127.0.0.1:8082")?
+			.bind(format!("127.0.0.1:{}", port))?
 			.run()
 			.await
 		},
